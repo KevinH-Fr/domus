@@ -2,3 +2,11 @@
 
 <%= render @home %>
 
+    <div class="container my-2 d-flex">
+      <%= link_to "Editer", edit_home_path(@home), class: "btn btn-sm btn-primary me-1" %>
+      <%= button_to "Supprimer", @home, method: :delete, class: "btn btn-sm btn-danger" %>
+    </div>
+
+    <%= link_to  "Proposer à la vente", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
+    <%= link_to  "Proposer à la location", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
+ 

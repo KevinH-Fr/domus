@@ -1,21 +1,18 @@
-<div id="<%= dom_id home %>" class="card">
-  <div class="card-header">
-    <%= home.name %>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">
-    
-      <%= home.address %>
-      <%= home.city %>
-      <%= home.cp %>
-
-    </h5>
-
-    <div class="container d-flex">
-      <%= link_to "Editer", edit_home_path(home), class: "btn btn-sm btn-primary me-1" %>
-      <%= button_to "Supprimer", home, method: :delete, class: "btn btn-sm btn-danger" %>
+<div id="<%= dom_id home %>" class="card mb-3" style="">
+  <div class="row g-0">
+    <div class="col-md-4">
+       <%= image_tag url_for(home.images.first), class: "img-fluid rounded-start", alt:"..." %>
     </div>
-
-
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <%= home.name %></h5>
+        <p class="card-text">
+          <%= home.address %>
+          <%= home.city %>
+          <%= home.cp %>
+        </p>
+        <p class="card-text"><small class="text-body-secondary"><%= home.updated_at %></small></p>
+      </div>
+    </div>
   </div>
 </div>

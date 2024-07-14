@@ -3,4 +3,12 @@
 <h2> Remplir toutes les informations sur votre bien pour passer une annonce et trouver preneur </h2>
 <hr>
 
+
+<h3> Mes biens</h3>
+
+<% if current_user %>
+  <%= @homes.ids %>
+<% end %>
+
+
 <%= link_to  "Ajouter un bien", new_home_path, class: "btn btn-primary fw-bold" %>

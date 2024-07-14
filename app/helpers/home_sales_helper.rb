@@ -1,0 +1,2 @@
+module HomeSalesHelper
+end

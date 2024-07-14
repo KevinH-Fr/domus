@@ -31,6 +31,11 @@
     <%= form.text_field :cp, class: "form-control" %>
   </div>
 
+  <div class="input-group input-group mb-2">
+    <%= form.label :images, class: "input-group-text" %>
+    <%= form.file_field :images, accept: "image/jpeg, image/png", class: "form-control file" %>
+  </div>  
+
   <%= form.hidden_field :user_id, value: current_user.id, class: "form-control" %>
 
   <div class="mt-4">
