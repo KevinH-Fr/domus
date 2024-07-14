@@ -9,6 +9,7 @@ class HomesController < ApplicationController
 
   # GET /homes/1 or /homes/1.json
   def show
+    @home_sale = HomeSale.where(home: @home.id)
   end
 
   # GET /homes/new

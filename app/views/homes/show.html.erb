@@ -2,11 +2,21 @@
 
 <%= render @home %>
 
-    <div class="container my-2 d-flex">
-      <%= link_to "Editer", edit_home_path(@home), class: "btn btn-sm btn-primary me-1" %>
-      <%= button_to "Supprimer", @home, method: :delete, class: "btn btn-sm btn-danger" %>
-    </div>
+<div class="card p-2">
 
-    <%= link_to  "Proposer à la vente", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
-    <%= link_to  "Proposer à la location", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
+     <h3> Offre de vente </h3>
+
+    <% if @home_sale %>
+
+      <%= render @home_sale %>
+      
+    <% else %>
+      <%= link_to  "Proposer à la vente", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
+    <% end %>
+    
+</div>
+
+<hr>
+
+<%= link_to  "Proposer à la location", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
  

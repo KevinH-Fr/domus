@@ -7,7 +7,9 @@
 <h3> Mes biens</h3>
 
 <% if current_user %>
-  <%= @homes.ids %>
+  <% @homes.each do |home| %>
+    <%= render home %>
+  <% end %>
 <% end %>
 
 
