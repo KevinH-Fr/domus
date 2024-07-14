@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :homes
+  devise_for :users
   get 'pages/home'
   get 'pages/offer_home'
   get 'pages/find_home'
