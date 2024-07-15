@@ -2,3 +2,7 @@
 <hr>
 <h2> Trouver le bien idéal selon vos critères </h2>
 <hr>
+
+<% @home_sales.each do |home_sale| %>
+    <%= render partial: "home_sales/advertisement", locals: { home_sale: home_sale } %>
+<% end %>

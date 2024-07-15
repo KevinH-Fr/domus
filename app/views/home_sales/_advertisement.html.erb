@@ -1,0 +1,19 @@
+<div id="<%= dom_id home_sale %>" class="card" style="width: 18rem;">
+  <%= link_to(image_tag(url_for(home_sale.home.images.first), class: "card-img-top", alt:"..."), home_sale) %>
+
+  <div class="card-body">
+    <h5 class="card-title"> <%= home_sale.home.full_address %> </h5>
+    <p class="card-text">
+        <strong>Price:</strong>
+        <%= home_sale.price %>
+    </p>
+>    <p class="card-text">
+        <strong>Description:</strong>
+        <%= home_sale.description %>
+    </p>
+
+    <%= action_links(home_sale) %>
+
+  </div>
+
+</div>

@@ -2,19 +2,16 @@
 
 <%= render @home %>
 
-<div class="card p-2">
 
-     <h3> Offre de vente </h3>
-
-    <% if @home_sale %>
-
-      <%= render @home_sale %>
-      
+    <% if @home_sale.present? %>
+      <div class="card p-2">
+        <h3> Offre de vente </h3>
+        <%= render @home_sale %>
+      </div>
     <% else %>
       <%= link_to  "Proposer à la vente", new_home_sale_path(home: @home.id), class: "btn btn-success" %>
     <% end %>
     
-</div>
 
 <hr>
 

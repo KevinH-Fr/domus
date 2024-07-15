@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
   
   def find_home
+    @home_sales = HomeSale.all
   end
 
 

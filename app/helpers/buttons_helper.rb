@@ -18,4 +18,19 @@ module ButtonsHelper
     end
   end
 
+
+  def action_links(model)
+    content_tag(:div, class: "container-fluid d-flex justify-content-end") do
+      link_to(model, class: "btn btn-sm btn-outline-primary") do
+        content_tag(:i, "", class: "fas fa-folder-open")
+      end +
+      link_to(edit_polymorphic_path(model), class: "btn btn-sm btn-outline-secondary mx-1") do
+        content_tag(:i, "", class: "fas fa-edit")
+      end +
+      button_to(model, method: :delete, class: "btn btn-sm btn-outline-danger") do
+        content_tag(:i, "", class: "fas fa-trash-alt")
+      end
+    end
+  end
+
 end

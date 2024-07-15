@@ -10,10 +10,6 @@
     <%= home_sale.description %>
   </p>
 
-      <div class="d-flex"> 
-        <%= link_to  "Ouvrir", home_sale, class: "btn btn-outline-primary" %>
-        <%= link_to "Editer", edit_home_sale_path(home_sale), class: "btn btn-sm btn-primary me-1" %>
-        <%= button_to "Supprimer", home_sale, method: :delete, class: "btn btn-sm btn-danger" %>
-      </div>
+  <%= action_links(home_sale) %>
 
 </div>

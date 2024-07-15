@@ -1,5 +1,5 @@
 class HomeSalesController < ApplicationController
-  before_action :set_home_sale, only: %i[ show edit update destroy ]
+  before_action :set_home_sale, only: %i[ show edit update destroy advertisement ]
 
   # GET /home_sales or /home_sales.json
   def index
