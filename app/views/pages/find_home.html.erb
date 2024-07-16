@@ -3,6 +3,20 @@
 <h2> Trouver le bien idéal selon vos critères </h2>
 <hr>
 
-<% @home_sales.each do |home_sale| %>
-    <%= render partial: "home_sales/advertisement", locals: { home_sale: home_sale } %>
+
+<%= search_form_for @q, url: pages_find_home_path, html: { class: "d-flex align-items-center w-100 position-relative" } do |f| %>
+  <%= f.search_field :description_cont, class: "form-control w-100 me-1 ps-5", autofocus: true, autocomplete: 'off', placeholder: "Rechercher" %>
+  <i class="fa fa-magnifying-glass position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%);"></i>
 <% end %>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    <% @home_sales.each do |home_sale| %>
+      <div class="col-md-4 mb-4">
+        <%= render partial: "home_sales/advertisement", locals: { home_sale: home_sale } %>
+      </div>
+    <% end %>
+  </div>
+</div>

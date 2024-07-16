@@ -9,7 +9,8 @@ class PagesController < ApplicationController
   end
   
   def find_home
-    @home_sales = HomeSale.all
+    @q = HomeSale.ransack(params[:q])
+    @home_sales = @q.result(distinct: true)
   end
 
 

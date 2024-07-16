@@ -68,4 +68,6 @@ class HomeSalesController < ApplicationController
     def home_sale_params
       params.require(:home_sale).permit(:home_id, :price, :description)
     end
+
+
 end
